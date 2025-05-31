@@ -1,0 +1,35 @@
+/* CSS for Project: Library for The Odin Project */
+
+
+
+dialog{
+    background-image: linear-gradient(to bottom right,  lightgray,gray)
+}
+button{
+    padding-block: 0.5em;
+}
+
+
+.input-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+}
+
+#rating{
+    width:2.5em;
+}
+
+#pages{
+    width: 4em;
+}
+
+.check-box{
+    margin-block: 0.5em;
+}
+/* #add-book{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */

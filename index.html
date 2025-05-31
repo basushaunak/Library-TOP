@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="./script/script.js" defer></script>
+    <title>Project: Library for The Odin Project</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <dialog id="add-book">
+            <form id="input-form">
+                <div class="input-grid">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages" required>
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" name="rating" min="1" max="10" value="5" required>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="is-read" name="is-read">
+                    <label for="is-read">Already Read</label>
+                </div>                
+                <div class="input-grid">
+                    <button autofocus id="btn-add-book">Add</button>
+                    <button id="btn-cancel" type="reset">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <footer></footer>    
+</body>
+</html>
