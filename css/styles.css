@@ -1,0 +1,114 @@
+/* CSS for Project: Library for The Odin Project */
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/roboto-variablefont_wdthwght-webfont.woff2") format("woff2"),
+         url("../assets/fonts/roboto-variablefont_wdthwght-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    src: url("../assets/fonts/roboto-italic-variablefont_wdthwght-webfont.woff2") format("woff2"),
+         url("../assets/fonts/roboto-italic-variablefont_wdthwght-webfont.woff") format("woff");
+}
+
+*, *::before, *::after{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Roboto",sans-serif;
+}
+
+dialog{
+    background-image: linear-gradient(to bottom right,  hsl(0, 0%, 99%),hsl(0, 0%, 80%));
+    width: 80%;
+    max-width: 300px;
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+dialog > *{
+    margin: 0.5em;
+}
+
+button{
+    padding-block: 0.5em;
+}
+.wrapper{
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+#btn-show-book-add-dialog{
+    display: block;
+    margin-inline: auto;
+    margin-block: 2em;
+    padding: 0.5em 1em;
+    background-image: linear-gradient(to bottom right,  hsl(0, 0%, 99%),hsl(0, 0%, 60%));
+}
+
+#btn-show-book-add-dialog:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to top left,  hsl(0, 0%, 99%),hsl(0, 0%, 60%));
+}
+
+.input-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+}
+
+#rating{
+    width:2.5em;
+}
+
+#pages{
+    width: 4em;
+}
+
+.check-box{
+    margin-block: 0.5em;
+}
+
+
+#book-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,275px);
+    justify-content:center;
+    gap: 1em;
+    background-image: url("../image/library.jpg");
+    background-repeat: repeat-y;
+}
+
+.book-card{
+    display: grid;
+    gap: 0.2em;
+    width: 275px;
+    border-radius: 20px;
+    border: 2px hsl(0, 0%, 50%) solid;
+    background-image: linear-gradient(to bottom right,  hsl(0, 0%, 99%),hsl(0, 3%, 21%));
+}
+
+.book-card > *{
+    padding-inline-start: 2rem;
+}
+.book-card > p:nth-child(2){
+    text-align: right;
+    font-style: italic;
+    margin-inline-end: 2em;
+}
+.book-card > h2{
+    margin-block-start: 1rem;
+}
+.book-card > button{
+    margin-block-end: 1rem;
+    width: 7em;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    justify-self: center;    
+}
