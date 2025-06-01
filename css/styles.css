@@ -100,7 +100,6 @@ button{
 }
 .book-card > button{
     margin-block-end: 1rem;
-    /* margin-inline-start: 2rem; */
     width: 7em;
     padding-block: 0.5em;
     padding-inline: 1em;

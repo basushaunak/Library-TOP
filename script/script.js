@@ -1,20 +1,8 @@
 // JS for Project: Library for The Odin Project
-
-// book-card:
-//                 `<div clas="book-card" id = "${bookLibraryId}">
-//                 <h2>${bookTitle}</h2>
-//                 <p>by ${bookAuthor}</p>
-//                 <p>Total Pages: ${bookPages}</p>
-//                 <p>Rating: ${bookRating}/10</p>
-//                 <input style="checkbox" id=chk-${bookLibraryId}>
-//                 <label for ="chk-${bookLibraryId">Already Read</label>
-//                 <btn id="btn-remove-book">Remove</btn>
-//                 </div>`
             
 const btnShowBookAddDialog = document.querySelector("#btn-show-book-add-dialog");
 const btnAddBook = document.querySelector("#btn-add-book");
 const btnCancel = document.querySelector("#btn-cancel");
-// const btnRemoveBook = document.querySelectorAll(".btn-remove-book");
 
 const dialogAddBook = document.querySelector("#dialog-add-book");
 const bookGrid = document.querySelector("#book-grid");
@@ -129,7 +117,33 @@ function initDialog(){
     isRead.checked = false;
 }
 
+function getBookIndex(bookId){
+    for(let i=0; i < myLibrary.length;i++){
+        if(myLibrary[i].libraryId === bookId){
+            return i;
+        }
+    }
+    return -1;
+}
+
 bookGrid.addEventListener("click",(e)=>{
-    alert(e.target.id);
-    alert(e.target.nodeName);
+    let elementType = e.target.nodeName;
+    if(!(elementType === "BUTTON" || elementType === "INPUT")){
+        return;
+    }
+    let bookId = e.target.id;
+    if(elementType==="INPUT"){
+        bookId = bookId.slice(4);
+    }
+    let bookIndex = getBookIndex(bookId);
+    if(bookIndex === -1){
+        throw Error("Logical Error!");
+    }
+    if(elementType==="INPUT"){
+        myLibrary[bookIndex].isRead = !myLibrary[bookIndex].isRead;
+        return;
+    }
+    alert(myLibrary[bookIndex].title + " is being deleted!");
+    myLibrary.splice(bookIndex,1);
+    updateBookGrid();
 })
