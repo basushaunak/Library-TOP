@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     <link href="./css/styles.css" rel="stylesheet">
     <script src="./script/script.js" defer></script>
     <title>Project: Library for The Odin Project</title>
@@ -10,28 +13,35 @@
 <body>
     <header></header>
     <main>
-        <dialog id="add-book">
+        <dialog id="dialog-add-book">
             <form id="input-form">
                 <div class="input-grid">
                     <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" required>
+                    <input type="text" id="title" name="title" title="Enter book title" required>
                     <label for="author">Author:</label>
-                    <input type="text" id="author" name="author" required>
+                    <input type="text" id="author" name="author" title="Enter book's author" required>
                     <label for="pages">Pages:</label>
-                    <input type="number" id="pages" name="pages" required>
+                    <input type="number" id="pages" name="pages" title="Enter total number of pages in the book" required>
                     <label for="rating">Rating:</label>
-                    <input type="number" id="rating" name="rating" min="1" max="10" value="5" required>
+                    <input type="number" id="rating" name="rating" title="Enter your rating out of 10" min="1" max="10" value="5" required>
                 </div>
                 <div class="check-box">
-                    <input type="checkbox" id="is-read" name="is-read">
+                    <input type="checkbox" id="is-read" name="is-read" title="check this box if you have read the book">
                     <label for="is-read">Already Read</label>
                 </div>                
                 <div class="input-grid">
-                    <button autofocus id="btn-add-book">Add</button>
-                    <button id="btn-cancel" type="reset">Cancel</button>
+                    <button autofocus id="btn-add-book" title="Add this book to library">Add</button>
+                    <button id="btn-cancel" type="reset" title="Reset book information">Cancel</button>
                 </div>
             </form>
         </dialog>
+        <div class="wrapper">
+            <button id="btn-show-book-add-dialog" title="Add a book to library">Add A Book</button>
+            <div class="book-grid">
+                <div class="book-card">
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>    
 </body>
