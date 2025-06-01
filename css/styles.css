@@ -81,6 +81,8 @@ button{
     grid-template-columns: repeat(auto-fit,275px);
     justify-content:center;
     gap: 1em;
+    background-image: url("../image/library.jpg");
+    background-repeat: repeat-y;
 }
 
 .book-card{
@@ -89,7 +91,7 @@ button{
     width: 275px;
     border-radius: 20px;
     border: 2px hsl(0, 0%, 50%) solid;
-    background-image: linear-gradient(to bottom right,  hsl(0, 0%, 99%),hsl(0, 3%, 21%));   
+    background-image: linear-gradient(to bottom right,  hsl(0, 0%, 99%),hsl(0, 3%, 21%));
 }
 
 .book-card > *{
