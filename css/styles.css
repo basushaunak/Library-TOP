@@ -95,6 +95,11 @@ button{
 .book-card > *{
     padding-inline-start: 2rem;
 }
+.book-card > p:nth-child(2){
+    text-align: right;
+    font-style: italic;
+    margin-inline-end: 2em;
+}
 .book-card > h2{
     margin-block-start: 1rem;
 }
