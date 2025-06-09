@@ -23,14 +23,57 @@ function getLibraryId(){
 }
 
 //libId,title.value,author.value,pages.value,rating.value,isRead.value
-function Book(libraryId,title,author,pages,rating, isRead) {
-    this.libraryId = libraryId;
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.rating = rating;
-    this.isRead = isRead;
+
+class Book {
+    #libraryId;
+    #title;
+    #author;
+    #pages;
+    #rating;
+    #isRead;
+    constructor(libraryId,title,author,pages,rating,isRead){
+        this.#libraryId = libraryId;
+        this.#title = title;
+        this.#author = author;
+        this.#pages = pages;
+        this.#rating = rating;
+        this.#isRead = isRead;        
+    }
+    get libraryId(){
+        return this.#libraryId;
+    }
+    get title(){
+        return this.#title;
+    }
+    get author(){
+        return this.#author;
+    }
+    get pages(){
+        return this.#pages;
+    }
+    get rating(){
+        return this.#rating;
+    }
+    set rating(val){
+        this.#rating = val;
+    }
+    get isRead(){
+        return this.#isRead;
+    }
+    set isRead(val){
+        this.#isRead = val;
+    }
+
 }
+
+// function Book(libraryId,title,author,pages,rating, isRead) {
+//     this.libraryId = libraryId;
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.rating = rating;
+//     this.isRead = isRead;
+// }
 
 function updateBookGrid(){
     if(myLibrary.length === 0){
