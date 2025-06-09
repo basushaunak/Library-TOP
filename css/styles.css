@@ -82,6 +82,8 @@ button:hover{
 
 
 #book-grid{
+    height: 85vh;
+    overflow-y: scroll;
     display: grid;
     grid-template-columns: repeat(auto-fit,275px);
     justify-content:center;
@@ -116,4 +118,11 @@ button:hover{
     padding-block: 0.5em;
     padding-inline: 1em;
     justify-self: center;    
+}
+
+#book-count{
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    background-color: hsl(0, 60%, 81%);
 }

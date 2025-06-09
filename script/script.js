@@ -38,6 +38,7 @@ class Book {
         this.#pages = pages;
         this.#rating = rating;
         this.#isRead = isRead;        
+        Book.bookCount++;
     }
     get libraryId(){
         return this.#libraryId;
@@ -101,6 +102,7 @@ function updateBookGrid(){
         bookGrid.innerHTML+=htmlStr;
         htmlStr=``;
     }
+    document.querySelector("#book-count").innerText=`Total Books in Library: ${myLibrary.length}`;
 }
 
 function addBookToLibrary() {
@@ -187,13 +189,14 @@ bookGrid.addEventListener("click",(e)=>{
         return;
     }
     alert(myLibrary[bookIndex].title + " is being deleted!");
+    myLibrary[bookIndex]=null;
     myLibrary.splice(bookIndex,1);
     updateBookGrid();
 })
 
 window.onload = ()=>{
  myLibrary.push(new Book(getLibraryId(),"The Hobbit","JRR Tolkein",615,7,false));
- myLibrary.push(new Book(getLibraryId(),"Draula","Bram Stoker",342,8,true));
+ myLibrary.push(new Book(getLibraryId(),"Dracula","Bram Stoker",342,8,true));
  myLibrary.push(new Book(getLibraryId(),"Carmilla","Sheridan Le Fanu",216,9,true));
  myLibrary.push(new Book(getLibraryId(),"War of The Worlds","H G Wells",315,8,false));
  myLibrary.push(new Book(getLibraryId(),"20 Thousand Leagues Under the Sea","Jules Verne",356,8,true));
@@ -201,5 +204,6 @@ window.onload = ()=>{
  myLibrary.push(new Book(getLibraryId(),"Frankenstein","Mary Shelley",316,9,false));
  myLibrary.push(new Book(getLibraryId(),"Robots of The Dawn","Isaac Asimov",416,10,true));
  myLibrary.push(new Book(getLibraryId(),"2001: A Space Odyssey","Arthur C Clarke",590,9,true));
+ myLibrary.push(new Book(getLibraryId(),"The Jewel of Seven Stars","Bram Stoker",290,7,true));
  updateBookGrid();
 }
