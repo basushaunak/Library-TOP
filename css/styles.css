@@ -103,6 +103,7 @@ button:hover{
 
 .book-card > *{
     padding-inline-start: 2rem;
+    color: rgb(3, 3, 88);
 }
 .book-card > p:nth-child(2){
     text-align: right;
@@ -111,6 +112,7 @@ button:hover{
 }
 .book-card > h2{
     margin-block-start: 1rem;
+    color: black;
 }
 .book-card > button{
     margin-block-end: 1rem;
@@ -125,4 +127,9 @@ button:hover{
     font-weight: 800;
     text-align: center;
     background-color: hsl(0, 60%, 81%);
+}
+
+#title:invalid, #author:invalid, #pages:invalid, #rating:invalid{
+    border: 2px red solid;
+    background-color: orange;
 }
